@@ -14,7 +14,7 @@ client = OpenAI(api_key=api_key)
 
 app = Flask(__name__)
 app.logger.setLevel(logging.DEBUG)
-def setup_mail_routes(app):
+def setup_chat_routes(app):
     @app.route("/", methods=['GET','POST'])
     def generate_response():
         # For GET requests, this is where you'll handle the OAuth callback.
